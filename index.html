@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Netflix Clone</title>
+</head>
+<body class="bg-dark text-light">
+    <!-- NavBar -->
+<nav class="navbar navbar-expand-lg bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="assets/Netflix_Logo_RGB.png" id="logo" alt="Logo_Netflix">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active text-light" aria-current="page" href="#">TV Show</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#">Movies</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#">Recently Added</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-light" href="#">My List</a>
+        </li>
+      </ul>
+    </div>
+    <form class="d-flex align-items-baseline position-absolute end-0 px-5 px-lg-2" role="search">
+      <a class=" nav-link px-1" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+      <a href="#" class="nav-link px-1">KIDS</a>
+      <a href="#" class="nav-link px-1"><i class="fa-solid fa-bell"></i></a>
+      <div class="dropdown px-1">
+        <button class="btn btn-dark border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="assets/Avatar.png" class="user" alt="user">
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-dark">
+          <li><a class="dropdown-item text-light" href="#"><img src="assets/Avatar2.png" class="secondary-user" alt="user-2"> Pippo</a></li>
+          <li><a class="dropdown-item text-light" href="#"><img src="assets/Avatar3.png" class="secondary-user" alt="user-3"> Alfredo</a></li>
+          <li><a class="dropdown-item text-light" href="#"><i class="fa-solid fa-pen pe-2"></i>Modifica profilo</a></li>
+          <li><a class="dropdown-item text-light" href="#"><i class="fa-solid fa-truck-arrow-right pe-2"></i>Trasferisci profilo</a></li>
+          <li><a class="dropdown-item text-light" href="#"><i class="fa-regular fa-user pe-2"></i>Account</a></li>
+          <li><a class="dropdown-item text-light" href="#"><i class="fa-solid fa-question pe-2"></i>Centro assistenza</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item text-light text-center" href="#">Esci da Netflix</a></li>
+        </ul>
+      </div>
+    </form>
+  </div>
+</nav>
+<!-- Info -->
+<div class="container-fluid d-flex align-items-center justify-content-between px-4">
+  <div class="d-flex align-items-center">
+    <div><h1 class="text-light">TV Shows</h1></div>
+    <div>
+      <div class="dropdown px-5">
+        <button class="btn btn-dark border-light rounded-0 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Genres
+        </button>
+        <ul class="dropdown-menu dropdown-menu-start dropdown-menu-dark">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Crime</a></li>
+          <li><a class="dropdown-item" href="#">Drama</a></li>
+          <li><a class="dropdown-item" href="#">Horror</a></li>
+          <li><a class="dropdown-item" href="#">Fantasy</a></li>
+          <li><a class="dropdown-item" href="#">Thriller</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex">
+    <button class="btn btn-dark border-light rounded-0"><i class="fa-solid fa-list"></i></button>
+    <button class="btn btn-dark border-light rounded-0"><i class="fa-solid fa-grip"></i></button>
+  </div>
+</div>
+<!-- Trending -->
+<div class="text-center my-3 px-4 intersection hidden py-4">
+    <h1 class="text-start my-4 ">Trending Now</h1>
+  <div class="row mx-auto my-auto justify-content-center">
+      <div id="carousel1" class=" carousel slide">
+          <div class="carousel-inner" role="listbox" id="newreleases-carousel">
+              <div class="carousel-item active">
+                  <div class="col-6 col-lg-2 col-md-3">
+                      <div class="card border-0">
+                          <div class="card-img">
+                              <img src="assets/movies/1.png" class="img-fluid">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="col-6 col-lg-2 col-md-3">
+                      <div class="card border-0">
+                          <div class="card-img">
+                              <img src="assets/movies/2.png" class="img-fluid">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="col-6 col-lg-2 col-md-3">
+                      <div class="card border-0">
+                          <div class="card-img">
+                              <img src="assets/movies/3.png" class="img-fluid">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="col-6 col-lg-2 col-md-3">
+                      <div class="card border-0">
+                          <div class="card-img">
+                              <img src="assets/movies/4.png" class="img-fluid">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="col-6 col-lg-2 col-md-3">
+                      <div class="card border-0">
+                          <div class="card-img">
+                              <img src="assets/movies/5.png" class="img-fluid">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="col-6 col-lg-2 col-md-3">
+                      <div class="card border-0">
+                          <div class="card-img">
+                              <img src="assets/movies/6.png" class="img-fluid">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-6 col-lg-2 col-md-3">
+                    <div class="card border-0">
+                        <div class="card-img">
+                            <img src="assets/movies/7.png" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+              <div class="col-6 col-lg-2 col-md-3">
+                  <div class="card border-0">
+                      <div class="card-img">
+                          <img src="assets/movies/8.png" class="img-fluid">
+                      </div>
+                  </div>
+              </div>
+          </div>
+          </div>
+          <a class="carousel-control-prev bg-transparent w-auto" href="#carousel1" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </a>
+          <a class="carousel-control-next bg-transparent w-auto" href="#carousel1" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </a>
+      </div>
+  </div>
+</div>
+<!-- Watch it Again -->
+<div class="text-center my-3 px-4 intersection hidden py-4">
+    <h1 class="text-start my-4">Watch it Again</h1>
+  <div class="row mx-auto my-auto justify-content-center">
+      <div id="carousel2" class="carousel slide">
+          <div class="carousel-inner" role="listbox" id="newreleases-carousel">
+              <div class="carousel-item active">
+                  <div class="col-6 col-lg-2 col-md-3">
+                      <div class="card border-0">
+                          <div class="card-img">
+                              <img src="assets/movies/9.png" class="img-fluid">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="col-6 col-lg-2 col-md-3">
+                      <div class="card border-0">
+                          <div class="card-img">
+                              <img src="assets/movies/10.png" class="img-fluid">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="col-6 col-lg-2 col-md-3">
+                      <div class="card border-0">
+                          <div class="card-img">
+                              <img src="assets/movies/11.png" class="img-fluid">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="col-6 col-lg-2 col-md-3">
+                      <div class="card border-0">
+                          <div class="card-img">
+                              <img src="assets/movies/12.png" class="img-fluid">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="col-6 col-lg-2 col-md-3">
+                      <div class="card border-0">
+                          <div class="card-img">
+                              <img src="assets/movies/13.png" class="img-fluid">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="col-6 col-lg-2 col-md-3">
+                      <div class="card border-0">
+                          <div class="card-img">
+                              <img src="assets/movies/14.png" class="img-fluid">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-6 col-lg-2 col-md-3">
+                    <div class="card border-0">
+                        <div class="card-img">
+                            <img src="assets/movies/15.png" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+              <div class="col-6 col-lg-2 col-md-3">
+                  <div class="card border-0">
+                      <div class="card-img">
+                          <img src="assets/movies/16.png" class="img-fluid">
+                      </div>
+                  </div>
+              </div>
+          </div>
+          </div>
+          <a class="carousel-control-prev bg-transparent w-auto" href="#carousel2" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </a>
+          <a class="carousel-control-next bg-transparent w-auto" href="#carousel2" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </a>
+      </div>
+  </div>
+</div>
+<!-- New Releases -->
+<div class="text-center my-3 px-4 intersection hidden py-4 pb-4">
+    <h1 class="text-start my-4">New Releases</h1>
+  <div class="row mx-auto my-auto justify-content-center">
+      <div id="carousel3" class="carousel slide">
+          <div class="carousel-inner" role="listbox" id="newreleases-carousel">
+              <div class="carousel-item active">
+                  <div class="col-6 col-lg-2 col-md-3">
+                      <div class="card border-0">
+                          <div class="card-img">
+                              <img src="assets/movies/17.png" class="img-fluid">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="col-6 col-lg-2 col-md-3">
+                      <div class="card border-0">
+                          <div class="card-img">
+                              <img src="assets/movies/18.png" class="img-fluid">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="col-6 col-lg-2 col-md-3">
+                      <div class="card border-0">
+                          <div class="card-img">
+                              <img src="assets/movies/5.png" class="img-fluid">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="col-6 col-lg-2 col-md-3">
+                      <div class="card border-0">
+                          <div class="card-img">
+                              <img src="assets/movies/7.png" class="img-fluid">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="col-6 col-lg-2 col-md-3">
+                      <div class="card border-0">
+                          <div class="card-img">
+                              <img src="assets/movies/12.png" class="img-fluid">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                  <div class="col-6 col-lg-2 col-md-3">
+                      <div class="card border-0">
+                          <div class="card-img">
+                              <img src="assets/movies/3.png" class="img-fluid">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-6 col-lg-2 col-md-3">
+                    <div class="card border-0">
+                        <div class="card-img">
+                            <img src="assets/movies/9.png" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+              <div class="col-6 col-lg-2 col-md-3">
+                  <div class="card border-0">
+                      <div class="card-img">
+                          <img src="assets/movies/1.png" class="img-fluid">
+                      </div>
+                  </div>
+              </div>
+          </div>
+          </div>
+          <a class="carousel-control-prev bg-transparent w-auto" href="#carousel3" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </a>
+          <a class="carousel-control-next bg-transparent w-auto" href="#carousel3" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </a>
+      </div>
+  </div>
+</div>
+<!-- Footer area -->
+<section class="border-top border-secondary">
+    <footer class="container pt-3 pb-0">
+        <section>
+            <!-- Section brand -->
+            <div class="container text-md-start text-center">
+                <div class="row">
+                    <div class="col-12">
+                        <i class="fa-brands fa-square-facebook px-2"></i>
+                        <i class="fa-brands fa-instagram px-2"></i>
+                        <i class="fa-brands fa-twitter px-2"></i>
+                        <i class="fa-brands fa-youtube px-2"></i>
+                    </div>
+                </div>
+            </div>
+            <!-- Section link -->
+            <div class="container row d-flex justify-content-between pt-3 d-none d-md-flex">
+                <div class="col-md-3 col-6">
+                    <p>
+                        <a href="#" class="text-reset text-decoration-none">Audio and Subtitles</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-reset text-decoration-none">Media Center</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-reset text-decoration-none">Privacy</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-reset text-decoration-none">Contact Us</a>
+                    </p>
+                </div>
+                <div class="col-md-3 col-6">
+                    <p>
+                        <a href="#" class="text-reset text-decoration-none">Audio Description</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-reset text-decoration-none">Investor Relation</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-reset text-decoration-none">Legal Notices</a>
+                    </p>
+                </div>
+                <div class="col-md-3 col-6">
+                    <p>
+                        <a href="#" class="text-reset text-decoration-none">Help Center</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-reset text-decoration-none">Jobs</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-reset text-decoration-none">Cookie Preferences</a>
+                    </p>
+                </div>
+                <div class="col-md-3 col-6">
+                    <p>
+                        <a href="#" class="text-reset text-decoration-none">Gift Cards</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-reset text-decoration-none">Terms of Use</a>
+                    </p>
+                    <p>
+                        <a href="#" class="text-reset text-decoration-none">Corporate Information</a>
+                    </p>
+                </div>
+    
+            </div>
+            <!-- Button Section -->
+            <div class="container py-3 text-md-start text-center">
+                <button type="button" class="btn btn-outline-secondary d-none d-md-flex">Service Code</button>
+                <p class="pt-2 agency">@ 1997-2019 Netflix, Inc. (i-0d00fcda2fdf9c0de)</p>
+            </div>
+    
+        </section>
+    </footer>
+</section>
+    <script src="https://kit.fontawesome.com/2fc754e3d6.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
